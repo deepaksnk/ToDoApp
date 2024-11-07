@@ -13,7 +13,7 @@ if (port == null || port == "") {
 app.use(express.static("public"))
 
 async function go() {
-    let client = new MongoClient("mongodb+srv://deepaksnk:deepak@cluster0.9jngtlb.mongodb.net/TodoApp?retryWrites=true&w=majority")
+    let client = new MongoClient("mongodb+srv://<username>:<clusterid>.mongodb.net/TodoApp?retryWrites=true&w=majority")
     await client.connect()
     db = client.db()
     app.listen(port)
