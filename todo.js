@@ -25,7 +25,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 function passwordProtected(req, res, next) {
-    res.set("WWW-Authenticate", 'Basic realm="Simple Todo App"')
+    res.set("WWW-Authenticate", 'Basic realm="Todo App"')
     console.log(req.headers.authorization) 
     if (req.headers.authorization == "Basic ZGVlcGFrdG9kb2xpc3Q6ZGVlcGFr") {
         next()
